@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import ProductCard from "@/components/ProductCard";
 import { products as initialProducts } from "@/data/products";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [products, setProducts] = useState(initialProducts);
@@ -34,13 +35,11 @@ export default function Home() {
           </div>
         )}
       </div>
-
-      {/* <ProductCard
-        title="Laptop x4"
-        price={100}
-        description="Es una laptop nueva"
-        image="image/gato.jpg"
-      /> */}
+      <div>
+        <Link href="/about" className="text-blue-500 mt-6 inline-block">
+          Ir a About
+        </Link>
+      </div>
     </main>
   );
 }
